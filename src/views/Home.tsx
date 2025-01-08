@@ -5,7 +5,6 @@ import "./Home.css";
 type PopUpContent = {
   name: string;
   address: string;
-  city: string;
   phone: string;
   cuisine: string;
 };
@@ -63,7 +62,6 @@ const Home: React.FC = () => {
         setPopupContent({
           name: e.features[0].properties?.name || "No name available",
           address: e.features[0].properties?.address || "No address available",
-          city: e.features[0].properties?.city || "No city available",
           phone: e.features[0].properties?.phone || "No phone available",
           cuisine: e.features[0].properties?.cuisine || "No cuisine available",
         });
@@ -103,7 +101,6 @@ const Home: React.FC = () => {
           </button>
           <h3>{popupContent?.name}</h3>
           <p>{popupContent?.address}</p>
-          <p>{popupContent?.city}</p>
           <p>{popupContent?.phone}</p>
           <p>{popupContent?.cuisine}</p>
         </div>
