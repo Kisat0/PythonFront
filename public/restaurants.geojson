@@ -1,27 +1,1845 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-74.006, 40.7128]
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9946528,
+                  40.7406518
+              ]
+          },
+          "properties": {
+              "name": "NOTARO RESTAURANT",
+              "cuisine": "Italian",
+              "address": "635 SECOND AVENUE, MANHATTAN, NY 10016.0",
+              "phone": "2126863400",
+              "inspection_date": "06/15/2015",
+              "violation_code": "02B",
+              "violation_description": "Hot food item not held at or above 140\u00c2\u00ba F.",
+              "score": 30.0
+          }
       },
-      "properties": {
-        "name": "Restaurant 1",
-        "cuisine": "Italien"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9903, 40.7306]
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9255789,
+                  40.7617758
+              ]
+          },
+          "properties": {
+              "name": "VITE BAR",
+              "cuisine": "Italian",
+              "address": "2507 BROADWAY, QUEENS, NY 11106.0",
+              "phone": "3478134702",
+              "inspection_date": "10/03/2016",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 2.0
+          }
       },
-      "properties": {
-        "name": "Restaurant 2",
-        "cuisine": "Mexicain"
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.02409355916808,
+                  40.625254299999995
+              ]
+          },
+          "properties": {
+              "name": "NO QUARTER",
+              "cuisine": "American",
+              "address": "8015 5 AVENUE, BROOKLYN, NY 11209.0",
+              "phone": "7187019180",
+              "inspection_date": "03/30/2017",
+              "violation_code": "04M",
+              "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8299324,
+                  40.7596295
+              ]
+          },
+          "properties": {
+              "name": "KABAB HOUSE NYC",
+              "cuisine": "Pakistani",
+              "address": "4339 MAIN ST, QUEENS, NY 11355.0",
+              "phone": "9172852796",
+              "inspection_date": "03/03/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 19.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98403096712329,
+                  40.676515550000005
+              ]
+          },
+          "properties": {
+              "name": "HENRI'S BACKYARD",
+              "cuisine": "American",
+              "address": "256 4TH AVE, BROOKLYN, NY 11215.0",
+              "phone": "9293378443",
+              "inspection_date": "06/22/2017",
+              "violation_code": "04K",
+              "violation_description": "Evidence of rats or live rats present in facility's food and/or non-food areas.",
+              "score": 39.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.11316164807323,
+                  40.58307055
+              ]
+          },
+          "properties": {
+              "name": "RICHMOND COUNTY COUNTRY CLUB",
+              "cuisine": "American",
+              "address": "1122 TODT HILL ROAD, STATEN ISLAND, NY 10304.0",
+              "phone": "7183510600",
+              "inspection_date": "06/14/2017",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.10629545603098,
+                  40.63024985
+              ]
+          },
+          "properties": {
+              "name": "PLANET WINGS",
+              "cuisine": "American",
+              "address": "480 FOREST AVENUE, STATEN ISLAND, NY 10310.0",
+              "phone": "7187209464",
+              "inspection_date": "03/10/2015",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 28.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9857912,
+                  40.7211816
+              ]
+          },
+          "properties": {
+              "name": "TOMOE SUSHI",
+              "cuisine": "Japanese",
+              "address": "172 THOMPSON STREET, MANHATTAN, NY 10012.0",
+              "phone": "2127779346",
+              "inspection_date": "10/06/2015",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 13.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98928929508426,
+                  40.72948805
+              ]
+          },
+          "properties": {
+              "name": "YAKITORI TAISHO",
+              "cuisine": "Japanese",
+              "address": "5 ST MARKS PLACE, MANHATTAN, NY 10003.0",
+              "phone": "2122285086",
+              "inspection_date": "08/13/2015",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 9.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.7358448,
+                  40.6659916
+              ]
+          },
+          "properties": {
+              "name": "GOLDEN KRUST CARIBBEAN BAKERY & GRILL",
+              "cuisine": "Caribbean",
+              "address": "13858 FRANCIS LEWIS BOULEVARD, QUEENS, NY 11422.0",
+              "phone": "7183412011",
+              "inspection_date": "10/14/2015",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 24.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.976247,
+                  40.6749858
+              ]
+          },
+          "properties": {
+              "name": "CRAB SPOT RESTAURANT",
+              "cuisine": "Seafood",
+              "address": "833 UNION STREET, BROOKLYN, NY 11215.0",
+              "phone": "7186222722",
+              "inspection_date": "07/28/2016",
+              "violation_code": "09C",
+              "violation_description": "Food contact surface not properly maintained.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9514225,
+                  40.7130242
+              ]
+          },
+          "properties": {
+              "name": "M NOODLE SHOP",
+              "cuisine": "Chinese",
+              "address": "549 METROPOLITAN AVENUE, BROOKLYN, NY 11211.0",
+              "phone": "7183848008",
+              "inspection_date": "01/19/2017",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 10.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.97525186658912,
+                  40.68251055
+              ]
+          },
+          "properties": {
+              "name": "LOWER SUITES STOLI BAR SOUTH CLUB LOUNGE",
+              "cuisine": "American",
+              "address": "620 ATLANTIC AVENUE, BROOKLYN, NY 11217.0",
+              "phone": "9176186310",
+              "inspection_date": "01/25/2017",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 4.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9049819,
+                  40.887374
+              ]
+          },
+          "properties": {
+              "name": "AN BEAL BOCHT CAFE",
+              "cuisine": "American",
+              "address": "445 WEST  238 STREET, BRONX, NY 10463.0",
+              "phone": "7188847127",
+              "inspection_date": "08/14/2017",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 9.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9981933,
+                  40.7145168
+              ]
+          },
+          "properties": {
+              "name": "NOM WAH TEA/DIM SUM PALOR",
+              "cuisine": "Chinese",
+              "address": "13 DOYERS STREET, MANHATTAN, NY 10013.0",
+              "phone": "2129626047",
+              "inspection_date": "09/02/2014",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9147452,
+                  40.8443436
+              ]
+          },
+          "properties": {
+              "name": "LUIGI'S PIZZA & PASTA",
+              "cuisine": "Pizza",
+              "address": "119 EAST MOUNT EDEN AVENUE, BRONX, NY 10452.0",
+              "phone": "7182941800",
+              "inspection_date": "10/27/2014",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 13.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9685894,
+                  40.6473998
+              ]
+          },
+          "properties": {
+              "name": "ANARKALI INDIAN FOOD",
+              "cuisine": "Indian",
+              "address": "1125 CHURCH AVE, BROOKLYN, NY 11218.0",
+              "phone": "7182822200",
+              "inspection_date": "06/25/2014",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 31.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9505783,
+                  40.779781
+              ]
+          },
+          "properties": {
+              "name": "MIDNIGHT EXPRESS",
+              "cuisine": "American",
+              "address": "1715 2 AVENUE, MANHATTAN, NY 10128.0",
+              "phone": "2128602320",
+              "inspection_date": "12/19/2014",
+              "violation_code": "04M",
+              "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+              "score": 25.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.891338,
+                  40.746644
+              ]
+          },
+          "properties": {
+              "name": "NEW PANDA GARDEN",
+              "cuisine": "Chinese",
+              "address": "5917 ROOSEVELT AVENUE, QUEENS, NY 11377.0",
+              "phone": "7184241038",
+              "inspection_date": "08/28/2014",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 28.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8183635,
+                  40.7614866
+              ]
+          },
+          "properties": {
+              "name": "SPRING FISH VILLAGE",
+              "cuisine": "Chinese",
+              "address": "13621 41ST AVE, QUEENS, NY 11355.0",
+              "phone": "7189393633",
+              "inspection_date": "03/21/2016",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 19.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8090571,
+                  40.6749441
+              ]
+          },
+          "properties": {
+              "name": "SERVICE BAR 7",
+              "cuisine": "American",
+              "address": "11000 ROCKAWAY BOULEVARD, QUEENS, NY 11420.0",
+              "phone": "6465881074",
+              "inspection_date": "04/07/2016",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 7.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.96717242118426,
+                  40.6935273
+              ]
+          },
+          "properties": {
+              "name": "THE FIVE SPOT",
+              "cuisine": "Soul Food",
+              "address": "459 MYRTLE AVENUE, BROOKLYN, NY 11205.0",
+              "phone": "7188520202",
+              "inspection_date": "05/12/2016",
+              "violation_code": "04F",
+              "violation_description": "Food, food preparation area, food storage area, area used by employees or patrons, contaminated by sewage or liquid waste.",
+              "score": 16.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9215824,
+                  40.7666967
+              ]
+          },
+          "properties": {
+              "name": "MEZQUITE",
+              "cuisine": "Mexican",
+              "address": "4506 30TH AVE, QUEENS, NY 11103.0",
+              "phone": "7182551722",
+              "inspection_date": "01/31/2017",
+              "violation_code": "06C",
+              "violation_description": "Food not protected from potential source of contamination during storage, preparation, transportation, display or service.",
+              "score": 17.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8849931,
+                  40.7555216
+              ]
+          },
+          "properties": {
+              "name": "EL RUMBERO BAR RESTAURANT",
+              "cuisine": "Latin (Cuban, Dominican, Puerto Rican, South & Central American)",
+              "address": "8205 NORTHERN BOULEVARD, QUEENS, NY 11372.0",
+              "phone": "7188033125",
+              "inspection_date": "06/16/2017",
+              "violation_code": "04A",
+              "violation_description": "Food Protection Certificate not held by supervisor of food operations.",
+              "score": 10.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.97937169046295,
+                  40.754282200000006
+              ]
+          },
+          "properties": {
+              "name": "ICHI UMI",
+              "cuisine": "Japanese",
+              "address": "6 EAST   32 STREET, MANHATTAN, NY 10016.0",
+              "phone": "2127251333",
+              "inspection_date": "09/26/2016",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98729139999999,
+                  40.622287549999996
+              ]
+          },
+          "properties": {
+              "name": "BROOKLYN DINER",
+              "cuisine": "American",
+              "address": "5922-24 AVENUE N, BROOKLYN, NY 11234.0",
+              "phone": "7182092246",
+              "inspection_date": "04/25/2017",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 47.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9552271,
+                  40.7494671
+              ]
+          },
+          "properties": {
+              "name": "ANABLE BASIN SAILING",
+              "cuisine": "American",
+              "address": "4-40 44 DRIVE, QUEENS, NY 11101.0",
+              "phone": "6462071333",
+              "inspection_date": "05/20/2015",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 5.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.783817,
+                  40.712646
+              ]
+          },
+          "properties": {
+              "name": "MR. WONTON",
+              "cuisine": "Chinese",
+              "address": "7805 JAMAICA AVE, QUEENS, NY 11421.0",
+              "phone": "7182963800",
+              "inspection_date": "06/16/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 7.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.94447209848192,
+                  40.7097173
+              ]
+          },
+          "properties": {
+              "name": "BAGEL WORLD",
+              "cuisine": "Bagels/Pretzels",
+              "address": "223 DEKALB AVENUE, BROOKLYN, NY 11205.0",
+              "phone": "7186432686",
+              "inspection_date": "07/24/2014",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 27.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8299324,
+                  40.7596295
+              ]
+          },
+          "properties": {
+              "name": "HAPPY RESTAURANT",
+              "cuisine": "Chinese",
+              "address": "4028 MAIN ST, QUEENS, NY 11354.0",
+              "phone": "9175672882",
+              "inspection_date": "09/17/2015",
+              "violation_code": "02H",
+              "violation_description": "Food not cooled by an approved method whereby the internal product temperature is reduced from 140\u00c2\u00ba F to 70\u00c2\u00ba F or less within 2 hours, and from 70\u00c2\u00ba F to 41\u00c2\u00ba F or less within 4 additional hours.",
+              "score": 25.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9734902,
+                  40.750371
+              ]
+          },
+          "properties": {
+              "name": "WOLF AND LAMB",
+              "cuisine": "Steak",
+              "address": "10 EAST   48 STREET, MANHATTAN, NY 10017.0",
+              "phone": "2123171950",
+              "inspection_date": "12/16/2014",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.966113,
+                  40.764629
+              ]
+          },
+          "properties": {
+              "name": "KBBQ",
+              "cuisine": "Korean",
+              "address": "672 LEXINGTON AVE, MANHATTAN, NY 10022.0",
+              "phone": "2123178822",
+              "inspection_date": "06/26/2017",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 9.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.836449,
+                  40.6974093
+              ]
+          },
+          "properties": {
+              "name": "JUMBO CHINESE KITCHEN",
+              "cuisine": "Chinese",
+              "address": "11304 JAMAICA AVENUE, QUEENS, NY 11418.0",
+              "phone": "7184415946",
+              "inspection_date": "07/13/2015",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 38.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9949921464041,
+                  40.726378350000005
+              ]
+          },
+          "properties": {
+              "name": "OLD SICHUAN CUISINE",
+              "cuisine": "Chinese",
+              "address": "65 BAYARD STREET, MANHATTAN, NY 10013.0",
+              "phone": "2122279888",
+              "inspection_date": "12/01/2014",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 19.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.97518892429245,
+                  40.762029850000005
+              ]
+          },
+          "properties": {
+              "name": "HUDSON'S MARKET @ SHERATON NEW YORK",
+              "cuisine": "American",
+              "address": "811 7 AVENUE, MANHATTAN, NY 10019.0",
+              "phone": "2128416569",
+              "inspection_date": "04/02/2015",
+              "violation_code": "06A",
+              "violation_description": "Personal cleanliness inadequate. Outer garment soiled with possible contaminant.  Effective hair restraint not worn in an area where food is prepared.",
+              "score": 11.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9383908,
+                  40.847056
+              ]
+          },
+          "properties": {
+              "name": "MANOLO TAPAS RESTAURANT",
+              "cuisine": "Tapas",
+              "address": "4161 BROADWAY, MANHATTAN, NY 10033.0",
+              "phone": "2129239100",
+              "inspection_date": "01/21/2016",
+              "violation_code": "02H",
+              "violation_description": "Food not cooled by an approved method whereby the internal product temperature is reduced from 140\u00c2\u00ba F to 70\u00c2\u00ba F or less within 2 hours, and from 70\u00c2\u00ba F to 41\u00c2\u00ba F or less within 4 additional hours.",
+              "score": 17.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.00571114407973,
+                  40.73987685
+              ]
+          },
+          "properties": {
+              "name": "THE CHESTER",
+              "cuisine": "American",
+              "address": "18 9TH AVE, MANHATTAN, NY 10014.0",
+              "phone": "6462532284",
+              "inspection_date": "11/27/2015",
+              "violation_code": "20F",
+              "violation_description": "Current letter grade card not posted.",
+              "score": null
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.00934490134394,
+                  40.70590315
+              ]
+          },
+          "properties": {
+              "name": "LEMON LEAVES",
+              "cuisine": "Chinese/Japanese",
+              "address": "55 LIBERTY STREET, MANHATTAN, NY 10005.0",
+              "phone": "2124252890",
+              "inspection_date": "08/24/2016",
+              "violation_code": "04H",
+              "violation_description": "Raw, cooked or prepared food is adulterated, contaminated, cross-contaminated, or not discarded in accordance with HACCP plan.",
+              "score": 11.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98393009985864,
+                  40.76575595
+              ]
+          },
+          "properties": {
+              "name": "THE BREAD FACTORY",
+              "cuisine": "American",
+              "address": "935 8 AVENUE, MANHATTAN, NY 10019.0",
+              "phone": "2125862221",
+              "inspection_date": "03/17/2017",
+              "violation_code": "06F",
+              "violation_description": "Wiping cloths soiled or not stored in sanitizing solution.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.16690992230345,
+                  40.588177900000005
+              ]
+          },
+          "properties": {
+              "name": "WENDY'S",
+              "cuisine": "Hamburgers",
+              "address": "26 RICHMOND HILL ROAD, STATEN ISLAND, NY 10314.0",
+              "phone": "7187613950",
+              "inspection_date": "02/23/2017",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 7.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.92066311755582,
+                  40.671608000000006
+              ]
+          },
+          "properties": {
+              "name": "DUNKIN' DONUTS, BASKIN ROBBINS",
+              "cuisine": "American",
+              "address": "1710 EASTERN PARKWAY, BROOKLYN, NY 11233.0",
+              "phone": "6463548755",
+              "inspection_date": "11/18/2014",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 16.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0091958,
+                  40.7063713
+              ]
+          },
+          "properties": {
+              "name": "BOMBAY SANDWICH CO",
+              "cuisine": "Vegetarian",
+              "address": "48 W. 27TH STREET, MANHATTAN, NY 10001.0",
+              "phone": "6467819756",
+              "inspection_date": "06/03/2016",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 10.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9636261307673,
+                  40.6676619
+              ]
+          },
+          "properties": {
+              "name": "BROTHERS BAGELS",
+              "cuisine": "American",
+              "address": "285 COURT STREET, BROOKLYN, NY 11231.0",
+              "phone": "7182224357",
+              "inspection_date": "01/08/2016",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 17.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9077258,
+                  40.8534266
+              ]
+          },
+          "properties": {
+              "name": "MEXICAN FAST FOOD",
+              "cuisine": "Mexican",
+              "address": "2620 JEROME AVENUE, BRONX, NY 10468.0",
+              "phone": "7184503698",
+              "inspection_date": "05/03/2016",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.891338,
+                  40.746644
+              ]
+          },
+          "properties": {
+              "name": "CHINA AAA",
+              "cuisine": "Chinese",
+              "address": "8210 ROOSEVELT AVE, QUEENS, NY 11372.0",
+              "phone": "7185058866",
+              "inspection_date": "12/05/2013",
+              "violation_code": "04L",
+              "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+              "score": 22.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9815958,
+                  40.7732296
+              ]
+          },
+          "properties": {
+              "name": "GULLUOGLU BAKLAVA & CAFE",
+              "cuisine": "Turkish",
+              "address": "982 2 AVENUE, MANHATTAN, NY 10022.0",
+              "phone": "2128130500",
+              "inspection_date": "05/27/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 13.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98565890160751,
+                  40.74844205
+              ]
+          },
+          "properties": {
+              "name": "CHIPOTLE MEXICAN GRILL",
+              "cuisine": "Mexican",
+              "address": "350 5 AVENUE, MANHATTAN, NY 10118.0",
+              "phone": "2126950412",
+              "inspection_date": "01/20/2015",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 52.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.97666174242424,
+                  40.7568836
+              ]
+          },
+          "properties": {
+              "name": "AFRICAN AMERICAN BEST FOOD",
+              "cuisine": "African",
+              "address": "410 LENOX AVENUE, MANHATTAN, NY 10037.0",
+              "phone": "2126908052",
+              "inspection_date": "01/18/2017",
+              "violation_code": "02B",
+              "violation_description": "Hot food item not held at or above 140\u00c2\u00ba F.",
+              "score": 29.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.83733881374907,
+                  40.6787674
+              ]
+          },
+          "properties": {
+              "name": "CHINA WOK II",
+              "cuisine": "Chinese",
+              "address": "10315 101 AVENUE, QUEENS, NY 11416.0",
+              "phone": "7188471898",
+              "inspection_date": "08/16/2017",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 2.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.91753253991598,
+                  40.809974600000004
+              ]
+          },
+          "properties": {
+              "name": "BROOK AVENUE DELI & PIZZA",
+              "cuisine": "Pizza",
+              "address": "348 BROOK AVENUE, BRONX, NY 10454.0",
+              "phone": "7186654068",
+              "inspection_date": "08/02/2017",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.783817,
+                  40.712646
+              ]
+          },
+          "properties": {
+              "name": "BONAO CHIMI RESTAURANT",
+              "cuisine": "Spanish",
+              "address": "7614 JAMAICA AVENUE, QUEENS, NY 11421.0",
+              "phone": "3478293089",
+              "inspection_date": "01/14/2015",
+              "violation_code": "04A",
+              "violation_description": "Food Protection Certificate not held by supervisor of food operations.",
+              "score": 27.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9751960007543,
+                  40.7389504
+              ]
+          },
+          "properties": {
+              "name": "STARBUCKS",
+              "cuisine": "Caf\u00c3\u00a9/Coffee/Tea",
+              "address": "462 7 AVENUE, MANHATTAN, NY 10018.0",
+              "phone": "2122796432",
+              "inspection_date": "11/09/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 3.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0121976,
+                  40.7073636
+              ]
+          },
+          "properties": {
+              "name": "BEAN N BEAN",
+              "cuisine": "American",
+              "address": "71 BROADWAY, MANHATTAN, NY 10006.0",
+              "phone": "2124228083",
+              "inspection_date": "04/01/2016",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8697005,
+                  40.7332625
+              ]
+          },
+          "properties": {
+              "name": "QUEEN'S PIZZA",
+              "cuisine": "Pizza",
+              "address": "11614 QUEENS BOULEVARD, QUEENS, NY 11375.0",
+              "phone": "7185445800",
+              "inspection_date": "11/07/2016",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98716297795082,
+                  40.690766249999996
+              ]
+          },
+          "properties": {
+              "name": "THE BROOKLYN TABERNACLE",
+              "cuisine": "American",
+              "address": "17 SMITH STREET, BROOKLYN, NY 11201.0",
+              "phone": "7182902000",
+              "inspection_date": "06/24/2014",
+              "violation_code": "02B",
+              "violation_description": "Hot food item not held at or above 140\u00c2\u00ba F.",
+              "score": 7.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9476352,
+                  40.6328717
+              ]
+          },
+          "properties": {
+              "name": "ARMANDO'S PIZZA",
+              "cuisine": "Pizza",
+              "address": "5119 AVENUE U, BROOKLYN, NY 11234.0",
+              "phone": "3474624150",
+              "inspection_date": "06/03/2017",
+              "violation_code": "06F",
+              "violation_description": "Wiping cloths soiled or not stored in sanitizing solution.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0282594,
+                  40.622524
+              ]
+          },
+          "properties": {
+              "name": "PLAKA RESTAURANT",
+              "cuisine": "Greek",
+              "address": "406 86 STREET, BROOKLYN, NY 11209.0",
+              "phone": "7186803056",
+              "inspection_date": "06/09/2015",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.01398285653728,
+                  40.705754150000004
+              ]
+          },
+          "properties": {
+              "name": "WHITE HORSE TAVERN",
+              "cuisine": "American",
+              "address": "25 BRIDGE ST, MANHATTAN, NY 10004.0",
+              "phone": "2126689046",
+              "inspection_date": "10/17/2016",
+              "violation_code": "09C",
+              "violation_description": "Food contact surface not properly maintained.",
+              "score": 24.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98363279788558,
+                  40.758353299999996
+              ]
+          },
+          "properties": {
+              "name": "JUMBO'S HAMBURGERS",
+              "cuisine": "Hamburgers",
+              "address": "274 WEST  145 STREET, MANHATTAN, NY 10039.0",
+              "phone": "2124915444",
+              "inspection_date": "03/22/2016",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 26.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.937411,
+                  40.8043494
+              ]
+          },
+          "properties": {
+              "name": "MCDONALD'S",
+              "cuisine": "Hamburgers",
+              "address": "145 EAST  125 STREET, MANHATTAN, NY 10035.0",
+              "phone": "6466721381",
+              "inspection_date": "04/06/2017",
+              "violation_code": "06E",
+              "violation_description": "Sanitized equipment or utensil, including in-use food dispensing utensil, improperly used or stored.",
+              "score": 5.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0051393982423,
+                  40.7274501
+              ]
+          },
+          "properties": {
+              "name": "Little Italy",
+              "cuisine": "Italian",
+              "address": "180 VARICK ST, MANHATTAN, NY 10014.0",
+              "phone": "2123664848",
+              "inspection_date": "07/05/2017",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 17.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0282979,
+                  40.622811
+              ]
+          },
+          "properties": {
+              "name": "TOKYO BAY",
+              "cuisine": "Japanese",
+              "address": "611 86TH ST, BROOKLYN, NY 11209.0",
+              "phone": "7188368688",
+              "inspection_date": "03/07/2016",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 9.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.90959240000001,
+                  40.875067200000004
+              ]
+          },
+          "properties": {
+              "name": "ROSARINA BAKERY",
+              "cuisine": "Bakery",
+              "address": "5219 BROADWAY, BRONX, NY 10463.0",
+              "phone": "6464499278",
+              "inspection_date": "10/29/2015",
+              "violation_code": "06C",
+              "violation_description": "Food not protected from potential source of contamination during storage, preparation, transportation, display or service.",
+              "score": 63.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9156116,
+                  40.8370643
+              ]
+          },
+          "properties": {
+              "name": "PLAZA TULCINGO RESTAURANT",
+              "cuisine": "Mexican",
+              "address": "10 EAST CLARKE PLACE, BRONX, NY 10452.0",
+              "phone": "7186815020",
+              "inspection_date": "09/08/2016",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 33.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.0076033,
+                  40.6375741
+              ]
+          },
+          "properties": {
+              "name": "FORTUNE BAKERY",
+              "cuisine": "Chinese",
+              "address": "5612 8TH AVE, BROOKLYN, NY 11220.0",
+              "phone": "7185677880",
+              "inspection_date": "07/08/2014",
+              "violation_code": "02G",
+              "violation_description": "Cold food item held above 41\u00c2\u00ba F (smoked fish and reduced oxygen packaged foods above 38 \u00c2\u00baF) except during necessary preparation.",
+              "score": 56.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8361477,
+                  40.5807608
+              ]
+          },
+          "properties": {
+              "name": "O'SAKE JAPANESE RESTAURANT",
+              "cuisine": "Japanese",
+              "address": "263 BEACH  116 STREET, QUEENS, NY 11694.0",
+              "phone": "7189458888",
+              "inspection_date": "10/16/2014",
+              "violation_code": "10H",
+              "violation_description": "Proper sanitization not provided for utensil ware washing operation.",
+              "score": 46.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9166857,
+                  40.8284625
+              ]
+          },
+          "properties": {
+              "name": "HUNGRY BIRD",
+              "cuisine": "Indian",
+              "address": "980 MORRIS AVE, BRONX, NY 10456.0",
+              "phone": "9178014900",
+              "inspection_date": "11/04/2015",
+              "violation_code": "04M",
+              "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+              "score": 10.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.95996658985703,
+                  40.717065500000004
+              ]
+          },
+          "properties": {
+              "name": "TWO DOOR TAVERN",
+              "cuisine": "American",
+              "address": "116 NORTH    5 STREET, BROOKLYN, NY 11249.0",
+              "phone": "7185890222",
+              "inspection_date": "01/14/2016",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 6.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.96378014953419,
+                  40.664346550000005
+              ]
+          },
+          "properties": {
+              "name": "Daisy's Diner",
+              "cuisine": "American",
+              "address": "452 5TH AVE, BROOKLYN, NY 11215.0",
+              "phone": "7187881438",
+              "inspection_date": "02/03/2015",
+              "violation_code": "03C",
+              "violation_description": "Eggs found dirty/cracked; liquid, frozen or powdered eggs not pasteurized.",
+              "score": 20.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.93936022777802,
+                  40.837045
+              ]
+          },
+          "properties": {
+              "name": "LA CARIDAD RESTAURANT",
+              "cuisine": "Latin (Cuban, Dominican, Puerto Rican, South & Central American)",
+              "address": "2092 AMSTERDAM AVENUE, MANHATTAN, NY 10032.0",
+              "phone": "2129237648",
+              "inspection_date": "06/09/2014",
+              "violation_code": "03A",
+              "violation_description": "Food from unapproved or unknown source or home canned. Reduced oxygen packaged (ROP) fish not frozen before processing; or ROP foods prepared on premises transported to another site.",
+              "score": 22.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98100049242726,
+                  40.74647995
+              ]
+          },
+          "properties": {
+              "name": "28 NOODLES",
+              "cuisine": "Chinese",
+              "address": "417 3 AVENUE, MANHATTAN, NY 10016.0",
+              "phone": "2126792888",
+              "inspection_date": "06/12/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 11.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98128505175879,
+                  40.7547605
+              ]
+          },
+          "properties": {
+              "name": "EMPORIUM BRASIL RESTAURANT",
+              "cuisine": "Brazilian",
+              "address": "15 WEST   46 STREET, MANHATTAN, NY 10036.0",
+              "phone": "2127644646",
+              "inspection_date": "09/24/2015",
+              "violation_code": "09B",
+              "violation_description": "Thawing procedures improper.",
+              "score": 9.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98099414999999,
+                  40.642358849999994
+              ]
+          },
+          "properties": {
+              "name": "TACO KING CHINESE REST",
+              "cuisine": "Chinese",
+              "address": "61A CHURCH AVENUE, BROOKLYN, NY 11218.0",
+              "phone": "7184351899",
+              "inspection_date": "09/28/2015",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 19.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.7533993,
+                  40.7498103
+              ]
+          },
+          "properties": {
+              "name": "IMPERIAL TASTE",
+              "cuisine": "Chinese",
+              "address": "22142 HORACE HARDING EXPRESSWAY, QUEENS, NY 11364.0",
+              "phone": "7182798174",
+              "inspection_date": "01/17/2017",
+              "violation_code": "22A",
+              "violation_description": "Nuisance created or allowed to exist. Facility not free from unsafe, hazardous, offensive or annoying conditions.",
+              "score": null
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.97449440058384,
+                  40.78775805
+              ]
+          },
+          "properties": {
+              "name": "THE JUILLIARD SCHOOL(ROSE CAFE)",
+              "cuisine": "American",
+              "address": "165 WEST 65 ST, MANHATTAN, NY 10023.0",
+              "phone": "2126714313",
+              "inspection_date": "10/21/2016",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9615795283434,
+                  40.76062935
+              ]
+          },
+          "properties": {
+              "name": "A ASO SUSHI",
+              "cuisine": "Japanese",
+              "address": "1103 1 AVENUE, MANHATTAN, NY 10065.0",
+              "phone": "2128888276",
+              "inspection_date": "05/27/2015",
+              "violation_code": "08A",
+              "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+              "score": 21.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98765647900504,
+                  40.733273249999996
+              ]
+          },
+          "properties": {
+              "name": "JOE'S PIZZA",
+              "cuisine": "Pizza",
+              "address": "150 EAST   14 STREET, MANHATTAN, NY 10003.0",
+              "phone": "2123889474",
+              "inspection_date": "12/17/2015",
+              "violation_code": "04N",
+              "violation_description": "Filth flies or food/refuse/sewage-associated (FRSA) flies present in facility\u001as food and/or non-food areas. Filth flies include house flies, little house flies, blow flies, bottle flies and flesh flies. Food/refuse/sewage-associated flies include fruit flies, drain flies and Phorid flies.",
+              "score": 23.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.90992938222647,
+                  40.6942298
+              ]
+          },
+          "properties": {
+              "name": "ANGELA'S BAKERY",
+              "cuisine": "Bakery",
+              "address": "717 KNICKERBOCKER AVENUE, BROOKLYN, NY 11221.0",
+              "phone": "7184180095",
+              "inspection_date": "05/18/2017",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 2.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9189811,
+                  40.6987479
+              ]
+          },
+          "properties": {
+              "name": "FORTUNATA'S II",
+              "cuisine": "Pizza",
+              "address": "305 KNICKERBOCKER AVENUE, BROOKLYN, NY 11237.0",
+              "phone": "7184978101",
+              "inspection_date": "11/16/2015",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 12.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9903401101048,
+                  40.762048300000004
+              ]
+          },
+          "properties": {
+              "name": "MEZZE BAR",
+              "cuisine": "Mediterranean",
+              "address": "691 9 AVENUE, MANHATTAN, NY 10036.0",
+              "phone": "9176756266",
+              "inspection_date": "10/15/2014",
+              "violation_code": "06C",
+              "violation_description": "Food not protected from potential source of contamination during storage, preparation, transportation, display or service.",
+              "score": 32.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.84374,
+                  40.8515616
+              ]
+          },
+          "properties": {
+              "name": "GOOD TO GO",
+              "cuisine": "Italian",
+              "address": "1894 EASTCHESTER ROAD, BRONX, NY 10461.0",
+              "phone": "7188292222",
+              "inspection_date": "12/17/2015",
+              "violation_code": "04L",
+              "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+              "score": 15.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.00367555,
+                  40.6554071
+              ]
+          },
+          "properties": {
+              "name": "REINA DE LA NUBE RESTAURANT",
+              "cuisine": "Spanish",
+              "address": "922A 4TH AVE, BROOKLYN, NY 11232.0",
+              "phone": "7188320200",
+              "inspection_date": "12/06/2016",
+              "violation_code": "20D",
+              "violation_description": "Choking first aid\u001a poster not posted. \u001aAlcohol and pregnancy\u001a warning sign not posted. Resuscitation equipment: exhaled air resuscitation masks (adult & pediatric), latex gloves, sign not posted. Inspection report sign not posted.",
+              "score": null
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.8088155,
+                  40.7201035
+              ]
+          },
+          "properties": {
+              "name": "SALAD SHACK",
+              "cuisine": "Salads",
+              "address": "15405 UNION TURNPIKE, QUEENS, NY 11367.0",
+              "phone": "7183802333",
+              "inspection_date": "02/07/2017",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 7.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.98171403467032,
+                  40.71431535
+              ]
+          },
+          "properties": {
+              "name": "PIZZA SHACK",
+              "cuisine": "Pizza",
+              "address": "525 GRAND ST, MANHATTAN, NY 10002.0",
+              "phone": "2124773367",
+              "inspection_date": "05/05/2017",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 13.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9825386,
+                  40.7417135
+              ]
+          },
+          "properties": {
+              "name": "V {iv} Thai Restaurant & Bar",
+              "cuisine": "Thai",
+              "address": "138 EAST   34 STREET, MANHATTAN, NY 10016.0",
+              "phone": "2122133317",
+              "inspection_date": "04/02/2015",
+              "violation_code": "06D",
+              "violation_description": "Food contact surface not properly washed, rinsed and sanitized after each use and following any activity when contamination may have occurred.",
+              "score": 18.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -74.03362359874129,
+                  40.61784395
+              ]
+          },
+          "properties": {
+              "name": "JOHNNY'S GRILL",
+              "cuisine": "American",
+              "address": "9406 3RD AVE, BROOKLYN, NY 11209.0",
+              "phone": "7186305200",
+              "inspection_date": "04/27/2015",
+              "violation_code": "09A",
+              "violation_description": "Canned food product observed dented and not segregated from other consumable food items.",
+              "score": 8.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.96392202386406,
+                  40.7107946
+              ]
+          },
+          "properties": {
+              "name": "CHIVE BLOSSOM",
+              "cuisine": "Asian",
+              "address": "394 BEDFORD AVE, BROOKLYN, NY 11249.0",
+              "phone": "7185763571",
+              "inspection_date": "07/19/2017",
+              "violation_code": "10B",
+              "violation_description": "Plumbing not properly installed or maintained; anti-siphonage or backflow prevention device not provided where required; equipment or floor not properly drained; sewage disposal system in disrepair or not functioning properly.",
+              "score": 21.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.9579142,
+                  40.7084064
+              ]
+          },
+          "properties": {
+              "name": "EDDIE JR'S SPORT LOUNGE",
+              "cuisine": "American",
+              "address": "40 MARCY AVENUE, BROOKLYN, NY 11211.0",
+              "phone": "7183848671",
+              "inspection_date": "08/02/2017",
+              "violation_code": "06C",
+              "violation_description": "Food not protected from potential source of contamination during storage, preparation, transportation, display or service.",
+              "score": 22.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.95851439291599,
+                  40.8176657
+              ]
+          },
+          "properties": {
+              "name": "SIDO FALAFEL & MORE",
+              "cuisine": "Mediterranean",
+              "address": "267 COLUMBUS AVE, MANHATTAN, NY 10023.0",
+              "phone": "2124962803",
+              "inspection_date": "12/09/2013",
+              "violation_code": "09C",
+              "violation_description": "Food contact surface not properly maintained.",
+              "score": 22.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.89641712476728,
+                  40.738180099999994
+              ]
+          },
+          "properties": {
+              "name": "AMF BOWLING CENTER",
+              "cuisine": "American",
+              "address": "6910 34 AVENUE, QUEENS, NY 11377.0",
+              "phone": "7186510440",
+              "inspection_date": "03/06/2015",
+              "violation_code": "15L",
+              "violation_description": "Smoke free workplace smoking policy inadequate, not posted, not provided to employees.",
+              "score": null
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.7890017,
+                  40.707166
+              ]
+          },
+          "properties": {
+              "name": "RESTAURANTE & PANADERIA GUATELINDA",
+              "cuisine": "Spanish",
+              "address": "170-18 JAMAICA AVE, QUEENS, NY 11432.0",
+              "phone": "2124706169",
+              "inspection_date": "12/24/2014",
+              "violation_code": "10F",
+              "violation_description": "Non-food contact surface improperly constructed. Unacceptable material used. Non-food contact surface or equipment improperly maintained and/or not properly sealed, raised, spaced or movable to allow accessibility for cleaning on all sides, above and underneath the unit.",
+              "score": 21.0
+          }
+      },
+      {
+          "type": "Feature",
+          "geometry": {
+              "type": "Point",
+              "coordinates": [
+                  -73.95851439291599,
+                  40.8176657
+              ]
+          },
+          "properties": {
+              "name": "GOOD ENOUGH TO EAT (A.G. BISTRO)",
+              "cuisine": "American",
+              "address": "520 COLUMBUS AVENUE, MANHATTAN, NY 10024.0",
+              "phone": "2125793194",
+              "inspection_date": "01/30/2015",
+              "violation_code": "06B",
+              "violation_description": "Tobacco use, eating, or drinking from open container in food preparation, food storage or dishwashing area observed.",
+              "score": 33.0
+          }
       }
-    }
   ]
 }
