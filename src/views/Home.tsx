@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "./Home.css";
+import axios from "axios";
 
 type PopUpContent = {
   name: string;
@@ -10,10 +11,25 @@ type PopUpContent = {
   cuisine: string;
 };
 
+type Restaurant = {
+    coordinates: [number, number];
+    name: string;
+    address: string;
+    phone: string;
+    cuisine: string;
+    inspectionDate: string;
+    action: string;
+    violationCode: string;
+    violationDescription: string;
+    criticalFlag: string;
+    score: string;
+}
+
 const Home: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const [popup, setPopup] = useState<boolean>(false);
-  const [popupContent, setPopupContent] = useState<PopUpContent | null>(null);
+    const [popupContent, setPopupContent] = useState<PopUpContent | null>(null);
+    const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -67,6 +83,20 @@ const Home: React.FC = () => {
           phone: e.features[0].properties?.phone || "No phone available",
           cuisine: e.features[0].properties?.cuisine || "No cuisine available",
         });
+          
+          setSelectedRestaurant({
+                coordinates,
+                name: e.features[0].properties?.name || "No name available",
+                address: e.features[0].properties?.address || "No address available",
+                phone: e.features[0].properties?.phone || "No phone available",
+                cuisine: e.features[0].properties?.cuisine || "No cuisine available",
+                inspectionDate: e.features[0].properties?.inspection_date || "No inspection date available",
+                action: e.features[0].properties?.action || "No action available",
+                violationCode: e.features[0].properties?.violation_code || "No violation code available",
+                violationDescription: e.features[0].properties?.violation_description || "No violation description available",
+                criticalFlag: e.features[0].properties?.critical_flag || "No critical flag available",
+                score: e.features[0].properties?.score || "No score available",
+            });
 
         setPopup(true);
       });
@@ -86,6 +116,18 @@ const Home: React.FC = () => {
       map.remove();
     };
   }, []);
+    
+    function Prediction() {
+        try {
+            axios.post(import.meta.env.VITE_API_URL, {
+                restaurant: selectedRestaurant
+            }).then((response) => {
+                console.log(response.data);
+            });
+        } catch (error) {
+            console.error(error);
+            }
+    }
 
   return (
     <main>
@@ -105,7 +147,8 @@ const Home: React.FC = () => {
           <p>{popupContent?.address}</p>
           <p>{popupContent?.city}</p>
           <p>{popupContent?.phone}</p>
-          <p>{popupContent?.cuisine}</p>
+            <p>{popupContent?.cuisine}</p>
+            <button className="button" onClick={Prediction}>Predict</button>
         </div>
       )}
     </main>
