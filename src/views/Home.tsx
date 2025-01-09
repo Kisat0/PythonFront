@@ -115,17 +115,39 @@ const Home: React.FC = () => {
     };
   }, []);
     
-    function Prediction() {
-        try {
-            axios.post(import.meta.env.VITE_API_URL, {
-                restaurant: selectedRestaurant
-            }).then((response) => {
-                console.log(response.data);
-            });
-        } catch (error) {
-            console.error(error);
-            }
+function Prediction() {
+    if (!selectedRestaurant) {
+        console.error("No restaurant selected");
+        return;
     }
+
+    // Ensure critical flag is mapped correctly
+    const criticalFlagMap: Record<string, number> = {
+        Critical: 1,
+        "Not Critical": 0,
+        "Not Applicable": -1,
+    };
+
+    // Prepare the features list
+    const features = [
+        selectedRestaurant.coordinates[0], // Longitude
+        selectedRestaurant.coordinates[1], // Latitude
+        parseFloat(selectedRestaurant.score), // Score (convert to float)
+        criticalFlagMap[selectedRestaurant.criticalFlag] || -1, // Map critical flag
+        selectedRestaurant.cuisine, // Cuisine description (raw string)
+    ];
+
+    // Send the POST request
+    axios
+        .post(`${import.meta.env.VITE_API_URL}/predict`, { features })
+        .then((response) => {
+            console.log("Prediction result:", response.data);
+        })
+        .catch((error) => {
+            console.error("Prediction error:", error);
+        });
+}
+
 
   return (
     <main>
