@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "./Home.css";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 type PopUpContent = {
   name: string;
@@ -27,8 +29,9 @@ type Restaurant = {
 const Home: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const [popup, setPopup] = useState<boolean>(false);
-    const [popupContent, setPopupContent] = useState<PopUpContent | null>(null);
-    const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+  const [popupContent, setPopupContent] = useState<PopUpContent | null>(null);
+  const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+  const [popupPosition, setPopupPosition] = useState<{ x: number, y: number } | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -44,7 +47,7 @@ const Home: React.FC = () => {
       // Charger les données GeoJSON des restaurants
       map.addSource("restaurants", {
         type: "geojson",
-        data: "/restaurants.geojson", // Chemin vers le fichier GeoJSON
+        data: "/restaurants.v2.geojson", // Chemin vers le fichier GeoJSON
       });
 
       // Ajouter une couche pour afficher les restaurants
@@ -53,8 +56,10 @@ const Home: React.FC = () => {
         type: "circle",
         source: "restaurants",
         paint: {
-          "circle-color": "#FF5733", // Couleur des points
-          "circle-radius": 6, // Taille des points
+          "circle-color": "#1b72de", // Couleur des points
+          "circle-radius": 7, // Taille des points
+          "circle-stroke-width": 1, // Largeur de la bordure
+          "circle-stroke-color": "#fff", // Couleur de la bordure
         },
       });
 
@@ -82,19 +87,24 @@ const Home: React.FC = () => {
           cuisine: e.features[0].properties?.cuisine || "No cuisine available",
         });
           
-          setSelectedRestaurant({
-                coordinates,
-                name: e.features[0].properties?.name || "No name available",
-                address: e.features[0].properties?.address || "No address available",
-                phone: e.features[0].properties?.phone || "No phone available",
-                cuisine: e.features[0].properties?.cuisine || "No cuisine available",
-                inspectionDate: e.features[0].properties?.inspection_date || "No inspection date available",
-                action: e.features[0].properties?.action || "No action available",
-                violationCode: e.features[0].properties?.violation_code || "No violation code available",
-                violationDescription: e.features[0].properties?.violation_description || "No violation description available",
-                criticalFlag: e.features[0].properties?.critical_flag || "No critical flag available",
-                score: e.features[0].properties?.score || "No score available",
-            });
+        setSelectedRestaurant({
+          coordinates,
+          name: e.features[0].properties?.name || "No name available",
+          address: e.features[0].properties?.address || "No address available",
+          phone: e.features[0].properties?.phone || "No phone available",
+          cuisine: e.features[0].properties?.cuisine || "No cuisine available",
+          inspectionDate: e.features[0].properties?.inspection_date || "No inspection date available",
+          action: e.features[0].properties?.action || "No action available",
+          violationCode: e.features[0].properties?.violation_code || "No violation code available",
+          violationDescription: e.features[0].properties?.violation_description || "No violation description available",
+          criticalFlag: e.features[0].properties?.critical_flag || "No critical flag available",
+          score: e.features[0].properties?.score || "No score available",
+        });
+
+        setPopupPosition({
+          x: e.point.x,
+          y: e.point.y,
+        });
 
         setPopup(true);
       });
@@ -110,12 +120,18 @@ const Home: React.FC = () => {
       });
     });
 
+    map.on("click", () => {
+      setPopup(false);
+      setPopupContent(null);
+      setPopupPosition(null);
+    });
+
     return () => {
       map.remove();
     };
   }, []);
     
-function Prediction() {
+  function Prediction() {
     if (!selectedRestaurant) {
         console.error("No restaurant selected");
         return;
@@ -141,24 +157,34 @@ function Prediction() {
     axios
         .post(`${import.meta.env.VITE_API_URL}/predict`, { features })
         .then((response) => {
-            console.log("Prediction result:", response.data);
+            
+            toast.info(
+                `The restaurant is predicted to be ${response.data.prediction[0] === 1 ? 'opened' : 'closed'} `,
+                {
+                    position: "top-right",
+                }
+            );
         })
-        .catch((error) => {
+        .catch((error: unknown) => {
             console.error("Prediction error:", error);
         });
-}
-
+  }
 
   return (
     <main>
+      <ToastContainer />
       <div ref={mapContainer} style={{ width: "100%", height: "100%" }} />
-      {popup && popupContent && (
-        <div className="popup">
+      {popup && popupContent && popupPosition && (
+        <div
+          className="popup"
+          style={{ left: popupPosition.x, top: popupPosition.y }}
+        >
           <button
             className="close-button"
             onClick={() => {
               setPopup(false);
               setPopupContent(null);
+              setPopupPosition(null);
             }}
           >
             X
@@ -166,8 +192,8 @@ function Prediction() {
           <h3>{popupContent?.name}</h3>
           <p>{popupContent?.address}</p>
           <p>{popupContent?.phone}</p>
-            <p>{popupContent?.cuisine}</p>
-            <button className="button" onClick={Prediction}>Predict</button>
+          <p>{popupContent?.cuisine}</p>
+          <button className="button" onClick={Prediction}>Predict</button>
         </div>
       )}
     </main>

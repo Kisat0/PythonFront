@@ -8,13 +8,11 @@ main{
     position: relative;
 }
 
-.popup{
+.popup {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     z-index: 1000;
+    transform: translate(-50%, -100%); 
 }
