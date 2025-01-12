@@ -164,6 +164,11 @@ const Home: React.FC = () => {
                     position: "top-right",
                 }
             );
+
+            console.log("Prediction:", response.data.prediction);
+            console.log("Probability:", response.data.probability);
+            
+            
         })
         .catch((error: unknown) => {
             console.error("Prediction error:", error);
