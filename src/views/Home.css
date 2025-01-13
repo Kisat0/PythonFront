@@ -27,11 +27,8 @@ main {
     position: absolute;
     color: rgb(221, 221, 221);
     border-radius: 5px;
-    transform: translate(-50%, -100%);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
-    height: 300px;
-    width: 300px;
 }
 
 button {
