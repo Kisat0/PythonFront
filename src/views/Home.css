@@ -1,4 +1,4 @@
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,13 +6,96 @@ main{
     height: 100vh;
     width: 100vw;
     position: relative;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
 .popup {
     position: absolute;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #aeadad;
+    padding: 30px;
+    border-radius: 15px;
     z-index: 1000;
-    transform: translate(-50%, -100%); 
+    transform: translate(-50%, -100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: hwb(211 27% 54%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 10px 0;
+}
+
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgb(70, 93, 118);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
