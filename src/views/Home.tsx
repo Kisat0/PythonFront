@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import * as maplibregl from "maplibre-gl";
-import "./Home.css";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import React, { useEffect, useRef, useState } from 'react';
+import * as maplibregl from 'maplibre-gl';
+import './Home.css';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 type PopUpContent = {
   name: string;
@@ -41,37 +41,37 @@ const Home: React.FC = () => {
 
     const map = new maplibregl.Map({
       container: mapContainer.current,
-      style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json", // Style de la carte
+      style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json', // Style de la carte
       center: [-74.006, 40.7128], // Coordonnées de New York
       zoom: 12, // Zoom initial
     });
 
-    map.on("load", () => {
+    map.on('load', () => {
       // Charger les données GeoJSON des restaurants
-      map.addSource("restaurants", {
-        type: "geojson",
-        data: "/restaurants.v2.geojson", // Chemin vers le fichier GeoJSON
+      map.addSource('restaurants', {
+        type: 'geojson',
+        data: '/restaurants.v2.geojson', // Chemin vers le fichier GeoJSON
       });
 
       // Ajouter une couche pour afficher les restaurants
       map.addLayer({
-        id: "restaurants-layer",
-        type: "circle",
-        source: "restaurants",
+        id: 'restaurants-layer',
+        type: 'circle',
+        source: 'restaurants',
         paint: {
-          "circle-color": "#1b72de", // Couleur des points
-          "circle-radius": 7, // Taille des points
-          "circle-stroke-width": 1, // Largeur de la bordure
-          "circle-stroke-color": "#fff", // Couleur de la bordure
+          'circle-color': '#1b72de', // Couleur des points
+          'circle-radius': 7, // Taille des points
+          'circle-stroke-width': 1, // Largeur de la bordure
+          'circle-stroke-color': '#fff', // Couleur de la bordure
         },
       });
 
       // Ajouter un événement de clic pour afficher les infobulles
-      map.on("click", "restaurants-layer", (e) => {
+      map.on('click', 'restaurants-layer', (e) => {
         if (
           !e.features ||
           !e.features[0].geometry ||
-          !("coordinates" in e.features[0].geometry)
+          !('coordinates' in e.features[0].geometry)
         ) {
           return;
         }
@@ -84,32 +84,32 @@ const Home: React.FC = () => {
         }
 
         setPopupContent({
-          name: e.features[0].properties?.name || "No name available",
-          address: e.features[0].properties?.address || "No address available",
-          phone: e.features[0].properties?.phone || "No phone available",
-          cuisine: e.features[0].properties?.cuisine || "No cuisine available",
+          name: e.features[0].properties?.name || 'No name available',
+          address: e.features[0].properties?.address || 'No address available',
+          phone: e.features[0].properties?.phone || 'No phone available',
+          cuisine: e.features[0].properties?.cuisine || 'No cuisine available',
         });
 
         setSelectedRestaurant({
           coordinates,
-          name: e.features[0].properties?.name || "No name available",
-          address: e.features[0].properties?.address || "No address available",
-          phone: e.features[0].properties?.phone || "No phone available",
-          cuisine: e.features[0].properties?.cuisine || "No cuisine available",
+          name: e.features[0].properties?.name || 'No name available',
+          address: e.features[0].properties?.address || 'No address available',
+          phone: e.features[0].properties?.phone || 'No phone available',
+          cuisine: e.features[0].properties?.cuisine || 'No cuisine available',
           inspectionDate:
             e.features[0].properties?.inspection_date ||
-            "No inspection date available",
-          action: e.features[0].properties?.action || "No action available",
+            'No inspection date available',
+          action: e.features[0].properties?.action || 'No action available',
           violationCode:
             e.features[0].properties?.violation_code ||
-            "No violation code available",
+            'No violation code available',
           violationDescription:
             e.features[0].properties?.violation_description ||
-            "No violation description available",
+            'No violation description available',
           criticalFlag:
             e.features[0].properties?.critical_flag ||
-            "No critical flag available",
-          score: e.features[0].properties?.score || "No score available",
+            'No critical flag available',
+          score: e.features[0].properties?.score || 'No score available',
         });
 
         setPopupPosition({
@@ -121,17 +121,17 @@ const Home: React.FC = () => {
       });
 
       // Changer le curseur de la souris en pointeur lorsque l'utilisateur survole les points
-      map.on("mouseenter", "restaurants-layer", () => {
-        map.getCanvas().style.cursor = "pointer";
+      map.on('mouseenter', 'restaurants-layer', () => {
+        map.getCanvas().style.cursor = 'pointer';
       });
 
       // Revenir au curseur par défaut lorsque l'utilisateur ne survole plus les points
-      map.on("mouseleave", "restaurants-layer", () => {
-        map.getCanvas().style.cursor = "";
+      map.on('mouseleave', 'restaurants-layer', () => {
+        map.getCanvas().style.cursor = '';
       });
     });
 
-    map.on("click", () => {
+    map.on('click', () => {
       setPopup(false);
       setPopupContent(null);
       setPopupPosition(null);
@@ -164,18 +164,42 @@ const Home: React.FC = () => {
     }
 
     // Normalize the number of violations
-    const minViolations = Math.min(...violationsPerLocation.map((loc) => loc.violations));
-    const maxViolations = Math.max(...violationsPerLocation.map((loc) => loc.violations));
-    const normalizedViolations = normalize(location.violations, minViolations, maxViolations);
+    const minViolations = Math.min(
+      ...violationsPerLocation.map((loc) => loc.violations)
+    );
+    const maxViolations = Math.max(
+      ...violationsPerLocation.map((loc) => loc.violations)
+    );
+    const normalizedViolations = normalize(
+      location.violations,
+      minViolations,
+      maxViolations
+    );
 
     // Normalize the coordinates
-    const minLongitude = Math.min(...violationsPerLocation.map((loc) => loc.longitude));
-    const maxLongitude = Math.max(...violationsPerLocation.map((loc) => loc.longitude));
-    const normalizedLongitude = normalize(location.longitude, minLongitude, maxLongitude);
+    const minLongitude = Math.min(
+      ...violationsPerLocation.map((loc) => loc.longitude)
+    );
+    const maxLongitude = Math.max(
+      ...violationsPerLocation.map((loc) => loc.longitude)
+    );
+    const normalizedLongitude = normalize(
+      location.longitude,
+      minLongitude,
+      maxLongitude
+    );
 
-    const minLatitude = Math.min(...violationsPerLocation.map((loc) => loc.latitude));
-    const maxLatitude = Math.max(...violationsPerLocation.map((loc) => loc.latitude));
-    const normalizedLatitude = normalize(location.latitude, minLatitude, maxLatitude);
+    const minLatitude = Math.min(
+      ...violationsPerLocation.map((loc) => loc.latitude)
+    );
+    const maxLatitude = Math.max(
+      ...violationsPerLocation.map((loc) => loc.latitude)
+    );
+    const normalizedLatitude = normalize(
+      location.latitude,
+      minLatitude,
+      maxLatitude
+    );
 
     // Calculate the location score
     const locationScore =
@@ -188,21 +212,25 @@ const Home: React.FC = () => {
 
   function Prediction() {
     if (!selectedRestaurant) {
-      console.error("No restaurant selected");
+      console.error('No restaurant selected');
       return;
     }
 
     // Ensure critical flag is mapped correctly
     const criticalFlagMap: Record<string, number> = {
       Critical: 1,
-      "Not Critical": 0,
-      "Not Applicable": -1,
+      'Not Critical': 0,
+      'Not Applicable': -1,
     };
 
     // Calculate LOCATION_SCORE
-    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
+    const locationScore = calculateLocationScore(
+      selectedRestaurant.coordinates
+    );
 
-    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
+    const inspectionYear = new Date(
+      selectedRestaurant.inspectionDate
+    ).getFullYear();
 
     // Prepare the features list
     const features = [
@@ -221,37 +249,41 @@ const Home: React.FC = () => {
       .then((response) => {
         toast.info(
           `The restaurant is predicted to be ${
-            response.data.prediction[0] === 1 ? "opened" : "closed"
+            response.data.prediction[0] === 1 ? 'opened' : 'closed'
           } `,
           {
-            position: "top-right",
+            position: 'top-right',
           }
         );
 
-        console.log("Prediction:", response.data.prediction);
-        console.log("Probability:", response.data.probability);
+        console.log('Prediction:', response.data.prediction);
+        console.log('Probability:', response.data.probability);
       })
       .catch((error: unknown) => {
-        console.error("Prediction error:", error);
+        console.error('Prediction error:', error);
       });
   }
 
   function Explain() {
     if (!selectedRestaurant) {
-      console.error("No restaurant selected");
+      console.error('No restaurant selected');
       return;
     }
 
     // Ensure critical flag is mapped correctly
     const criticalFlagMap: Record<string, number> = {
       Critical: 1,
-      "Not Critical": 0,
-      "Not Applicable": -1,
+      'Not Critical': 0,
+      'Not Applicable': -1,
     };
 
     // Calculate LOCATION_SCORE
-    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
-    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
+    const locationScore = calculateLocationScore(
+      selectedRestaurant.coordinates
+    );
+    const inspectionYear = new Date(
+      selectedRestaurant.inspectionDate
+    ).getFullYear();
 
     // Prepare the features list
     const features = [
@@ -269,17 +301,16 @@ const Home: React.FC = () => {
       .post(`${import.meta.env.VITE_API_URL}/explain`, { features })
       .then((response) => {
         toast.info(response.data.explanation);
-
       })
       .catch((error: unknown) => {
-        console.error("Explanation error:", error);
+        console.error('Explanation error:', error);
       });
   }
 
   return (
     <main>
       <ToastContainer />
-      <div ref={mapContainer} style={{ width: "100%", height: "100%" }} />
+      <div ref={mapContainer} style={{ width: '100%', height: '100%' }} />
       {popup && popupContent && popupPosition && (
         <div
           className="popup"
@@ -295,11 +326,13 @@ const Home: React.FC = () => {
           >
             X
           </button>
-          <h3>{popupContent?.name}</h3>
-          <p>{popupContent?.address}</p>
-          <p>{popupContent?.phone}</p>
-          <p>{popupContent?.cuisine}</p>
-          <div>
+          <div className="content">
+            <h3>{popupContent?.name}</h3>
+            <p>{popupContent?.address}</p>
+            <p>{popupContent?.phone}</p>
+            <p>{popupContent?.cuisine}</p>
+          </div>
+          <div className="buttons">
             <button className="button" onClick={Prediction}>
               Predict
             </button>
