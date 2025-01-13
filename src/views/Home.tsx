@@ -25,6 +25,16 @@ type Restaurant = {
   score: string;
 };
 
+type PopUpExplanationData = {
+  feature_importance: FeatureImportance[];
+  probability: string[];
+};
+
+type FeatureImportance = {
+  Feature: string;
+  Importance: number;
+};
+
 const Home: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const [popup, setPopup] = useState<boolean>(false);
@@ -35,6 +45,9 @@ const Home: React.FC = () => {
     x: number;
     y: number;
   } | null>(null);
+
+  const [popupExplanation, setPopupExplanation] =
+    useState<PopUpExplanationData | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -135,6 +148,7 @@ const Home: React.FC = () => {
       setPopup(false);
       setPopupContent(null);
       setPopupPosition(null);
+      setPopupExplanation(null);
     });
 
     return () => {
@@ -164,18 +178,42 @@ const Home: React.FC = () => {
     }
 
     // Normalize the number of violations
-    const minViolations = Math.min(...violationsPerLocation.map((loc) => loc.violations));
-    const maxViolations = Math.max(...violationsPerLocation.map((loc) => loc.violations));
-    const normalizedViolations = normalize(location.violations, minViolations, maxViolations);
+    const minViolations = Math.min(
+      ...violationsPerLocation.map((loc) => loc.violations)
+    );
+    const maxViolations = Math.max(
+      ...violationsPerLocation.map((loc) => loc.violations)
+    );
+    const normalizedViolations = normalize(
+      location.violations,
+      minViolations,
+      maxViolations
+    );
 
     // Normalize the coordinates
-    const minLongitude = Math.min(...violationsPerLocation.map((loc) => loc.longitude));
-    const maxLongitude = Math.max(...violationsPerLocation.map((loc) => loc.longitude));
-    const normalizedLongitude = normalize(location.longitude, minLongitude, maxLongitude);
+    const minLongitude = Math.min(
+      ...violationsPerLocation.map((loc) => loc.longitude)
+    );
+    const maxLongitude = Math.max(
+      ...violationsPerLocation.map((loc) => loc.longitude)
+    );
+    const normalizedLongitude = normalize(
+      location.longitude,
+      minLongitude,
+      maxLongitude
+    );
 
-    const minLatitude = Math.min(...violationsPerLocation.map((loc) => loc.latitude));
-    const maxLatitude = Math.max(...violationsPerLocation.map((loc) => loc.latitude));
-    const normalizedLatitude = normalize(location.latitude, minLatitude, maxLatitude);
+    const minLatitude = Math.min(
+      ...violationsPerLocation.map((loc) => loc.latitude)
+    );
+    const maxLatitude = Math.max(
+      ...violationsPerLocation.map((loc) => loc.latitude)
+    );
+    const normalizedLatitude = normalize(
+      location.latitude,
+      minLatitude,
+      maxLatitude
+    );
 
     // Calculate the location score
     const locationScore =
@@ -200,9 +238,13 @@ const Home: React.FC = () => {
     };
 
     // Calculate LOCATION_SCORE
-    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
+    const locationScore = calculateLocationScore(
+      selectedRestaurant.coordinates
+    );
 
-    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
+    const inspectionYear = new Date(
+      selectedRestaurant.inspectionDate
+    ).getFullYear();
 
     // Prepare the features list
     const features = [
@@ -250,8 +292,12 @@ const Home: React.FC = () => {
     };
 
     // Calculate LOCATION_SCORE
-    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
-    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
+    const locationScore = calculateLocationScore(
+      selectedRestaurant.coordinates
+    );
+    const inspectionYear = new Date(
+      selectedRestaurant.inspectionDate
+    ).getFullYear();
 
     // Prepare the features list
     const features = [
@@ -268,8 +314,12 @@ const Home: React.FC = () => {
     axios
       .post(`${import.meta.env.VITE_API_URL}/explain`, { features })
       .then((response) => {
-        toast.info(response.data.explanation);
+        console.log("Explanation:", response.data);
 
+        setPopupExplanation({
+          feature_importance: response.data.feature_importance,
+          probability: response.data.probability,
+        });
       })
       .catch((error: unknown) => {
         console.error("Explanation error:", error);
@@ -307,6 +357,29 @@ const Home: React.FC = () => {
               Explain
             </button>
           </div>
+        </div>
+      )}
+      {popupExplanation && (
+        <div className="popup-explanation">
+          <button
+            className="close-button"
+            onClick={() => setPopupExplanation(null)}
+          >
+            X
+          </button>
+          <h3>Explanation</h3>
+          <p>
+            Probability: Closed: {popupExplanation.probability[0][0]} Opened:
+            {popupExplanation.probability[0][1]}
+          </p>
+          <h4>Feature Importance</h4>
+          <ul>
+            {popupExplanation.feature_importance.map((item: { Feature: string, Importance: number }) => (
+              <li key={item.Feature}>
+                {item.Feature}: {item.Importance}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </main>
