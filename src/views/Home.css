@@ -13,7 +13,7 @@ main {
 
 .popup {
     position: absolute;
-    background-color: #aeadad;
+    background-color: #c4bcbc;
     padding: 30px;
     border-radius: 15px;
     z-index: 1000;
