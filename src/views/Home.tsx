@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "./Home.css";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-
+import { ToastContainer, toast } from "react-toastify";
 
 type PopUpContent = {
   name: string;
@@ -13,25 +12,29 @@ type PopUpContent = {
 };
 
 type Restaurant = {
-    coordinates: [number, number];
-    name: string;
-    address: string;
-    phone: string;
-    cuisine: string;
-    inspectionDate: string;
-    action: string;
-    violationCode: string;
-    violationDescription: string;
-    criticalFlag: string;
-    score: string;
-}
+  coordinates: [number, number];
+  name: string;
+  address: string;
+  phone: string;
+  cuisine: string;
+  inspectionDate: string;
+  action: string;
+  violationCode: string;
+  violationDescription: string;
+  criticalFlag: string;
+  score: string;
+};
 
 const Home: React.FC = () => {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const [popup, setPopup] = useState<boolean>(false);
   const [popupContent, setPopupContent] = useState<PopUpContent | null>(null);
-  const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
-  const [popupPosition, setPopupPosition] = useState<{ x: number, y: number } | null>(null);
+  const [selectedRestaurant, setSelectedRestaurant] =
+    useState<Restaurant | null>(null);
+  const [popupPosition, setPopupPosition] = useState<{
+    x: number;
+    y: number;
+  } | null>(null);
 
   useEffect(() => {
     if (!mapContainer.current) return;
@@ -86,18 +89,26 @@ const Home: React.FC = () => {
           phone: e.features[0].properties?.phone || "No phone available",
           cuisine: e.features[0].properties?.cuisine || "No cuisine available",
         });
-          
+
         setSelectedRestaurant({
           coordinates,
           name: e.features[0].properties?.name || "No name available",
           address: e.features[0].properties?.address || "No address available",
           phone: e.features[0].properties?.phone || "No phone available",
           cuisine: e.features[0].properties?.cuisine || "No cuisine available",
-          inspectionDate: e.features[0].properties?.inspection_date || "No inspection date available",
+          inspectionDate:
+            e.features[0].properties?.inspection_date ||
+            "No inspection date available",
           action: e.features[0].properties?.action || "No action available",
-          violationCode: e.features[0].properties?.violation_code || "No violation code available",
-          violationDescription: e.features[0].properties?.violation_description || "No violation description available",
-          criticalFlag: e.features[0].properties?.critical_flag || "No critical flag available",
+          violationCode:
+            e.features[0].properties?.violation_code ||
+            "No violation code available",
+          violationDescription:
+            e.features[0].properties?.violation_description ||
+            "No violation description available",
+          criticalFlag:
+            e.features[0].properties?.critical_flag ||
+            "No critical flag available",
           score: e.features[0].properties?.score || "No score available",
         });
 
@@ -130,49 +141,139 @@ const Home: React.FC = () => {
       map.remove();
     };
   }, []);
-    
+
+  function normalize(value: number, min: number, max: number): number {
+    return (value - min) / (max - min);
+  }
+
+  function calculateLocationScore(coordinates: [number, number]): number {
+    // Placeholder data for violations per location
+    const violationsPerLocation = [
+      { longitude: -74.006, latitude: 40.7128, violations: 10 },
+      // Add more data as needed
+    ];
+
+    // Find the violations for the given coordinates
+    const location = violationsPerLocation.find(
+      (loc) =>
+        loc.longitude === coordinates[0] && loc.latitude === coordinates[1]
+    );
+
+    if (!location) {
+      return 0; // Default score if location not found
+    }
+
+    // Normalize the number of violations
+    const minViolations = Math.min(...violationsPerLocation.map((loc) => loc.violations));
+    const maxViolations = Math.max(...violationsPerLocation.map((loc) => loc.violations));
+    const normalizedViolations = normalize(location.violations, minViolations, maxViolations);
+
+    // Normalize the coordinates
+    const minLongitude = Math.min(...violationsPerLocation.map((loc) => loc.longitude));
+    const maxLongitude = Math.max(...violationsPerLocation.map((loc) => loc.longitude));
+    const normalizedLongitude = normalize(location.longitude, minLongitude, maxLongitude);
+
+    const minLatitude = Math.min(...violationsPerLocation.map((loc) => loc.latitude));
+    const maxLatitude = Math.max(...violationsPerLocation.map((loc) => loc.latitude));
+    const normalizedLatitude = normalize(location.latitude, minLatitude, maxLatitude);
+
+    // Calculate the location score
+    const locationScore =
+      normalizedViolations * 0.5 +
+      normalizedLongitude * 0.25 +
+      normalizedLatitude * 0.25;
+
+    return locationScore;
+  }
+
   function Prediction() {
     if (!selectedRestaurant) {
-        console.error("No restaurant selected");
-        return;
+      console.error("No restaurant selected");
+      return;
     }
 
     // Ensure critical flag is mapped correctly
     const criticalFlagMap: Record<string, number> = {
-        Critical: 1,
-        "Not Critical": 0,
-        "Not Applicable": -1,
+      Critical: 1,
+      "Not Critical": 0,
+      "Not Applicable": -1,
     };
+
+    // Calculate LOCATION_SCORE
+    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
+
+    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
 
     // Prepare the features list
     const features = [
-        selectedRestaurant.coordinates[0], // Longitude
-        selectedRestaurant.coordinates[1], // Latitude
-        parseFloat(selectedRestaurant.score), // Score (convert to float)
-        criticalFlagMap[selectedRestaurant.criticalFlag] || -1, // Map critical flag
-        selectedRestaurant.cuisine, // Cuisine description (raw string)
+      selectedRestaurant.coordinates[0], // Longitude
+      selectedRestaurant.coordinates[1], // Latitude
+      parseFloat(selectedRestaurant.score), // Score (convert to float)
+      criticalFlagMap[selectedRestaurant.criticalFlag] || -1, // Map critical flag
+      selectedRestaurant.cuisine, // Cuisine description (raw string)
+      locationScore, // Add LOCATION_SCORE
+      inspectionYear, // Add INPECTION_DATE
     ];
 
     // Send the POST request
     axios
-        .post(`${import.meta.env.VITE_API_URL}/predict`, { features })
-        .then((response) => {
-            
-            toast.info(
-                `The restaurant is predicted to be ${response.data.prediction[0] === 1 ? 'opened' : 'closed'} `,
-                {
-                    position: "top-right",
-                }
-            );
+      .post(`${import.meta.env.VITE_API_URL}/predict`, { features })
+      .then((response) => {
+        toast.info(
+          `The restaurant is predicted to be ${
+            response.data.prediction[0] === 1 ? "opened" : "closed"
+          } `,
+          {
+            position: "top-right",
+          }
+        );
 
-            console.log("Prediction:", response.data.prediction);
-            console.log("Probability:", response.data.probability);
-            
-            
-        })
-        .catch((error: unknown) => {
-            console.error("Prediction error:", error);
-        });
+        console.log("Prediction:", response.data.prediction);
+        console.log("Probability:", response.data.probability);
+      })
+      .catch((error: unknown) => {
+        console.error("Prediction error:", error);
+      });
+  }
+
+  function Explain() {
+    if (!selectedRestaurant) {
+      console.error("No restaurant selected");
+      return;
+    }
+
+    // Ensure critical flag is mapped correctly
+    const criticalFlagMap: Record<string, number> = {
+      Critical: 1,
+      "Not Critical": 0,
+      "Not Applicable": -1,
+    };
+
+    // Calculate LOCATION_SCORE
+    const locationScore = calculateLocationScore(selectedRestaurant.coordinates);
+    const inspectionYear = new Date(selectedRestaurant.inspectionDate).getFullYear();
+
+    // Prepare the features list
+    const features = [
+      selectedRestaurant.coordinates[0], // Longitude
+      selectedRestaurant.coordinates[1], // Latitude
+      parseFloat(selectedRestaurant.score), // Score (convert to float)
+      criticalFlagMap[selectedRestaurant.criticalFlag] || -1, // Map critical flag
+      selectedRestaurant.cuisine, // Cuisine description (raw string)
+      locationScore, // Add LOCATION_SCORE
+      inspectionYear, // Add INPECTION_DATE
+    ];
+
+    // Send the POST request
+    axios
+      .post(`${import.meta.env.VITE_API_URL}/explain`, { features })
+      .then((response) => {
+        toast.info(response.data.explanation);
+
+      })
+      .catch((error: unknown) => {
+        console.error("Explanation error:", error);
+      });
   }
 
   return (
@@ -198,7 +299,14 @@ const Home: React.FC = () => {
           <p>{popupContent?.address}</p>
           <p>{popupContent?.phone}</p>
           <p>{popupContent?.cuisine}</p>
-          <button className="button" onClick={Prediction}>Predict</button>
+          <div>
+            <button className="button" onClick={Prediction}>
+              Predict
+            </button>
+            <button className="button" onClick={Explain}>
+              Explain
+            </button>
+          </div>
         </div>
       )}
     </main>
